@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week-3</title>
+    <link rel="stylesheet" href="paypal.css">
+</head>
+<body>
+    
+    <div class="main">
+
+        <form action="#">
+            <div class="payment">
+
+                <div class="heading">
+                    <h1>Order Summary</h1>
+                    <div class="total">
+                        <p>Total</p>
+                        <p>$333 / month</p>
+                    </div>
+                    <div class="total">
+                        <p>Total</p>
+                        <p>$100</p>
+                    </div>
+                </div>
+
+                <div class="cards">
+                    <h2>Payment Method</h2>
+                    <div class="mode">
+                        <input type="radio" id="first" name="radios" checked="checked">
+                        <label for="first" class="visa">
+                            <img src="cards.png" alt="all cards">
+                            <p>Credit / Debit</p>
+                        </label>
+                        <input type="radio" id="second" name="radios"  >
+                        <label for="second" class="paypal">
+                            <img src="paypal.png" alt="paypal method">
+                            <p>PayPal</p>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="information">
+                    <h2>Card Info</h2>
+                    <div class="details">
+                        <div class="number">
+                            <span>Card Number</span>
+                            <input  type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" maxlength="19"
+                                placeholder="1234 5678 9101 2345" required>
+                        </div>
+                        <div class="date">
+                            <span>Expiry date</span>
+                            <input id="expiry-date" type="text"  placeholder="MM / YY"
+                                onfocus="(this.type='month')" name="expiry-date" min="2023-01"required />
+                         </div>
+                        <div class="code">
+                            <span>Security code</span>
+                            <input id="cvv" type="text" name="cvv" minlength="3"
+                            maxlength="3" placeholder="CVV" pattern="\d*"inputmode="numeric"equired />
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <button type="submit">Buy Now</button>
+                        <a href="#">
+                            <h3>Need Help?</h3>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
